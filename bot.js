@@ -1,3 +1,4 @@
+//Keys stored in location .gitignore
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = 'KEY';
