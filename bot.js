@@ -5,13 +5,21 @@ const token = 'KEY';
 var unirest = require('unirest');
 
 bot.on('ready', () => {
-  console.log('I am awaited in Valhalla. v0.1');
+  console.log('I am awaited in Valhalla. v0.2');
 });
 
 bot.on('message', message => {
   var BotCheck = message.author.bot;
 
   if (BotCheck === false) {
+    var messageIndex = message.content.indexOf('!help');
+
+    if (messageIndex != -1){
+        message.author.sendMessage("HearthBot v0.2 Help!");
+        message.author.sendMessage("Current Available Commands:");
+        message.author.sendMessage("[[Card Name]] : Return Golden Image of requested card");
+    }
+
     var messageIndex = message.content.indexOf('[[');
 
     if (messageIndex != -1) {
