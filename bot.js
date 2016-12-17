@@ -4,8 +4,7 @@ const bot = new Discord.Client();
 const config = require('./config.json');
 const unirest = require('unirest');
 
-var token = config.dev_token;
-//var token = config.prod_token;
+var token = config.token;
 
 bot.on('ready', () => {
   console.log('I am awaited in Valhalla. v0.2.1');
